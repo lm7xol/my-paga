@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game World</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #eeeeee;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 380px;
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 7px 0;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 7px;
+      background: #222;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    #message {
+      margin-top: 18px;
+      color: #555;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="logo">🎮 Game World</div>
+
+    <div class="subtitle">
+      صفحة ألعاب تجريبية
+    </div>
+
+    <input
+      type="text"
+      placeholder="اسم مستخدم تجريبي"
+      autocomplete="off"
+    >
+
+    <input
+      type="password"
+      placeholder="كلمة مرور تجريبية"
+      autocomplete="off"
+    >
+
+    <button onclick="showMessage()">
+      دخول تجريبي
+    </button>
+
+    <div id="message"></div>
+
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").textContent =
+        "هذه صفحة تجريبية فقط، ولم يتم إرسال أو حفظ أي بيانات.";
+    }
+  </script>
+
+</body>
+</html>
